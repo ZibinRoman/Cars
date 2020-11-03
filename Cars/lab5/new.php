@@ -37,30 +37,24 @@
                         $query_1 = "SELECT * FROM $database.$queryTab_1 ORDER BY $database.$queryTab_1.id ASC";
                         $result_0 = mysqli_query($link, $query_0) or die("Не могу выполнить запрос!");
                         $result_1 = mysqli_query($link, $query_1) or die("Не могу выполнить запрос!");
-                        
                         echo("<fieldset><legend>Добавить к характеристике значение</legend>");
                         echo("<form id='form' method='post' action='save_new.php'>");
-                        
                         $id_0 = "cars_select";
                         echo("<label for='$id_0'>Список разрешенных характеристик: </label>");
                         echo("<select id='$id_0' name='$id_0'>");
                         echo("<option value=''>--Please choose an option--</option>");
-                        
                         while ($row=mysqli_fetch_array($result_0)){
                             echo("<option value='$row[0]'> $row[0] - $row[1] $row[2]</option>");
                         }
                         echo("</select><br>");
-                        
                         $id_1 = "seller_select";
                         echo("<label for='$id_1'>Список соответствующих значений: </label>");
                         echo("<select id='$id_1' name='$id_1'>");
                         echo("<option value=''>--Please choose an option--</option>");
-                    
                         while ($row=mysqli_fetch_array($result_1)){
                             echo("<option value='$row[0]'> $row[0] - $row[1] $row[2]</option>");
                         }
                         echo("</select><br>");
-                    
                         echo("<input type='hidden' name='index' value='".$index."'> <br>");
                         echo("<input type='submit' value='Добавить'/> <br>");
                         echo("</form>");

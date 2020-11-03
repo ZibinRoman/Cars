@@ -3,7 +3,13 @@
 <html>
     <body>
 		<?
-			
+			if(isset($_GET['id'])&&isset($_GET['query'])){
+                $id = htmlentities(mysqli_real_escape_string($link, $_GET['id']));
+                $index = htmlentities(mysqli_real_escape_string($link, $_GET['query']));
+                $query = "DELETE FROM $database.$index WHERE id='$id'";
+                $result = mysqli_query($link, $query) or die ("Ошибка в запросе");
+                header("Location: info.php?Index=$index");
+			}
 		?>
 	</body>
 </html>
