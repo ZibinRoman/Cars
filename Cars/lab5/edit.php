@@ -3,13 +3,7 @@
 <html>
     <body>
 		<?
-			if(isset($_GET['Index'])){
-                $index = htmlentities(mysqli_real_escape_string($link, $_GET['Index']));
-                switch($index){
-                
-                }
-			    
-			}
+			
 		?>
 	</body>
 </html>
