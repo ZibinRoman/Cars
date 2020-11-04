@@ -37,7 +37,7 @@
                         $query_1 = "SELECT * FROM $database.$queryTab_1 ORDER BY $database.$queryTab_1.id ASC";
                         $result_0 = mysqli_query($link, $query_0) or die("Не могу выполнить запрос!");
                         $result_1 = mysqli_query($link, $query_1) or die("Не могу выполнить запрос!");
-                        echo("<fieldset><legend>Добавить к характеристике значение</legend>");
+                        echo("<fieldset><legend>Добавить машину к автосалону</legend>");
                         echo("<form id='form' method='post' action='save_new.php'>");
                         $id_0 = "cars_select";
                         echo("<label for='$id_0'>Список разрешенных характеристик: </label>");
