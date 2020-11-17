@@ -13,11 +13,11 @@
     $pdf->SetAuthor('Зыбин Роман ПИ-319');
     $pdf->SetTitle('Автомобили');
     $pdf->SetMargins(20, 30, 20);
-    $pdf->SetFont('helvetica', '', 14, '', true);
+    $pdf->SetFont('arial', '', 14, '', true);
     $pdf->AddPage();
     $pdf->SetXY(20, 50);
     $pdf->SetDrawColor(100, 100, 0);
-    $pdf->SetTextColor(200, 0, 0);
+    $pdf->SetTextColor(200, 200, 0);
     $html = '<h1>Table</h1><br>';
     $html .= "<table border='1' width='20%'>";
     $html .= "<tr>";

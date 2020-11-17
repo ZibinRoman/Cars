@@ -49,7 +49,7 @@
                             $cars_select = htmlentities(mysqli_real_escape_string($link, $_POST['cars_select']));
                             $seller_select = htmlentities(mysqli_real_escape_string($link, $_POST['seller_select']));
                             if(($cars_select=="")||($seller_select=="")){
-                                 die("Ошибка значения пусты");
+                                die("Ошибка значения пусты");
                             }
                             $query = "INSERT INTO $database.$index (id, cars, seller) VALUES (NULL, '$cars_select', '$seller_select')";
                             mysqli_query($link, $query) or die("Не могу выполнить запрос!");
